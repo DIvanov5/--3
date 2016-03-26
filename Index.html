@@ -1,0 +1,369 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html"; charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/cusel.css" rel="stylesheet" />
+    <link href="css/JQueryUI.css" rel="stylesheet" />
+    <title>Site</title>
+    <!-- JQuery -->
+    <!--<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>-->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <!--<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <!-- JQuery UI -->
+    <!--<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>-->
+    <script src="js/jquery-ui.min.js"></script>
+    <!-- Cusel List -->
+    <script src="js/cusel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var params = {
+                changedEl: "#select",
+                visRows: 5,
+                scrollArrows: true
+            }
+        cuSel(params)
+        });
+
+    </script>
+    <!-- Jquery UI Range Slider -->
+    <script>
+  $(function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 999,
+      values: [ 0, 999 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+  });
+    </script>
+</head>
+<body>
+    <a id="home-link" href="#"></a>
+    <div id="wrapper">
+        <div class="panel-top">
+            <div class="center clearfix">
+                <div class="social left">
+                    <a href="#" class="s-fb">&nbsp</a>
+                    <a href="#" class="s-dribble">&nbsp</a>
+                    <a href="#" class="s-tw">&nbsp</a>
+                    <a href="#" class="s-mail">&nbsp</a>
+                    <a href="#" class="s-vimeo">&nbsp</a>
+                </div>
+                <div class="basket right">
+                    <a href="#"><span>Cart (2)</span></a>
+                </div>
+                <div class="login right">
+                    <a href="#">Login</a>
+                    <span>/</span>
+                    <a href="#">Register</a>
+                </div>
+            </div>
+        </div>
+        <div id="header" class="center clearfix">
+            <div id="logo" class="left">
+                <a href="#">
+                    <img src="img/logo.png" alt="Alternate Text" />
+                    <span>Store</span>
+                </a>
+            </div>
+            <ul class="nav clearfix right">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Cd’s</a></li>
+                <li><a href="#">Dvd’s</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+        <div id="home">
+            <div class="home-bg">
+                <div class="center">
+                    <a href="/" class="link-home">&nbsp;</a>
+                    <h2 class="title-home">Shop - Sidebar on the right</h2>
+                    <ul class="breadcrumbs clearfix">
+                        <li><a href="#">Home<span class="sp">&raquo;</span></a></li>
+                        <li><a href="#">Shop<span class="sp">&raquo;</span></a></li>
+                        <li><a href="#">Sidebar on the right</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sorting center clearfix">
+            <ul class="s-category">
+                <li class="active"><a href="#">ALL</a></li>
+                <li><a href="#">ROCK</a></li>
+                <li><a href="#">POP</a></li>
+                <li><a href="#">METAL</a></li>
+                <li><a href="#">DANCE</a></li>
+                <li><a href="#">CLASSICAL</a></li>
+            </ul>
+            <div class="s-list right">
+                <a href="#" class="ic-squares">&nbsp;</a>
+                <a href="#" class="ic-list">&nbsp;</a>
+            </div>
+            <div class="sel-sorting right">
+                <span>Sort by:</span>
+                <select id="select">
+                    <option value="value">Alphabetically</option>
+                    <option value="value">Alphabetically</option>
+                    <option value="value">Alphabetically</option>
+                    <option value="value">Alphabetically</option>
+                    <option value="value">Alphabetically</option>
+                    <option value="value">Alphabetically</option>
+                </select>
+            </div>
+        </div>
+        <div class="middle center clearfix">
+            <div class="sidebar right">
+                <h4 class="s-title">Price filter<span class="s-title-br"></span> </h4>
+                <div class="price-slider">
+                    <div id="slider-range"></div>
+                    <p>
+                        <label for="amount">Price:</label>
+                        <input type="text" id="amount" readonly style="border:0;">
+                        <button class="slider-btn">Filter</button>
+                    </p>
+                </div>
+                <h4 class="s-title">Best sellers<span class="s-title-br"></span></h4>
+                <div class="best-seller">
+                    <div class="s-product clearfix">
+                        <div class="s-product-img left">
+                            <a href="#"><img src="img/s-bs-1.png" alt="" /></a>
+                        </div>
+                        <div class="s-product-info">
+                            <h6><a href="#">Awaken the Hero</a></h6>
+                            <div class="rate">
+                                <div style="width:80%"></div>
+                            </div>
+                            <span class="comments"><i class="comments-ic"></i>12 Comments</span>
+                        </div>
+                    </div>
+                    <div class="s-product clearfix">
+                        <div class="s-product-img left">
+                            <a href="#"><img src="img/s-bs-2.png" alt="" /></a>
+                        </div>
+                        <div class="s-product-info">
+                            <h6><a href="#">Caribou</a></h6>
+                            <div class="rate">
+                                <div style="width:80%"></div>
+                            </div>
+                            <span class="comments"><i class="comments-ic"></i>25 Comments</span>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="s-title">Our Categories<span class="s-title-br"></span> </h4>
+                <ul class="cat-list">
+                    <li><a href="#">Rock & Roll</a><span>(5)</span></li>
+                    <li><a href="#">Hardcore & Metal</a><span>(3)</span></li>
+                    <li><a href="#">Dance & Pop</a><span>(8)</span></li>
+                    <li><a href="#">Classical Music</a><span>(12)</span></li>
+                    <li><a href="#">Jazz</a><span>(7)</span></li>
+                    <li><a href="#">Country</a><span>(15)</span></li>
+                </ul>
+                <h4 class="s-title">Search our Alboms<span class="s-title-br"></span> </h4>
+                <form action="#" class="s-search">
+                    <input type="text" placeholder="Search..." />
+                    <input type="submit" value="" />
+                </form>
+            </div>
+            <div class="content">
+                <div class="product-cat clearfix">
+                    <div class="product left">
+                        <div class="p-img">
+                            <span class="sale">Sale</span>
+                            <a href="#"><img src="img/image1.png" alt="" /></a>
+                        </div>
+                        <div class="p-footer">
+                            <h6><a href="#">Aqualung</a><span>by Artist</span></h6>
+                            <div class="rate">
+                                <div style="width:80%"></div>
+                            </div>
+                            <p><strong>Lorem ipsum</strong> dolor sit amet an adipiscing elit, sed diam nonu.</p>
+                            <div class="p-footer-price clearfix">
+                                <span class="price">$14.99</span>
+                                <span class="price-new">$8.99</span>
+                                <a href="" class="cart right">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product left">
+                        <div class="p-img">
+                            <a href="#"><img src="img/image2.png" alt="" /></a>
+                        </div>
+                        <div class="p-footer">
+                            <h6><a href="#">Awaken the Hero</a><span>by Artist</span></h6>
+                            <div class="rate">
+                                <div style="width:80%"></div>
+                            </div>
+                            <p><strong>Lorem ipsum</strong> dolor sit amet an adipiscing elit, sed diam nonu.</p>
+                            <div class="p-footer-price clearfix">
+                                <span class="price-lg">$17.99</span>
+                                <a href="" class="cart right">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product left">
+                        <div class="p-img">
+                            <a href="#"><img src="img/image3.png" alt="" /></a>
+                        </div>
+                        <div class="p-footer">
+                            <h6><a href="#">Ravenna</a><span>by Artist</span></h6>
+                            <div class="rate">
+                                <div style="width:80%"></div>
+                            </div>
+                            <p><strong>Lorem ipsum</strong> dolor sit amet an adipiscing elit, sed diam nonu.</p>
+                            <div class="p-footer-price clearfix">
+                                <span class="price-lg">$17.99</span>
+                                <a href="" class="cart right">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product left">
+                        <div class="p-img">
+                            <span class="sale">Sale</span>
+                            <a href="#"><img src="img/image4.png" alt="" /></a>
+                        </div>
+                        <div class="p-footer">
+                            <h6><a href="#">Oh my Deer</a><span>by Artist</span></h6>
+                            <div class="rate">
+                                <div style="width:80%"></div>
+                            </div>
+                            <p><strong>Lorem ipsum</strong> dolor sit amet an adipiscing elit, sed diam nonu.</p>
+                            <div class="p-footer-price clearfix">
+                                <span class="price">$14.99</span>
+                                <span class="price-new">$8.99</span>
+                                <a href="" class="cart right">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product left">
+                        <div class="p-img">
+                            <a href="#"><img src="img/image5.png" alt="" /></a>
+                        </div>
+                        <div class="p-footer">
+                            <h6><a href="#">Caribou</a><span>by Artist</span></h6>
+                            <div class="rate">
+                                <div style="width:80%"></div>
+                            </div>
+                            <p><strong>Lorem ipsum</strong> dolor sit amet an adipiscing elit, sed diam nonu.</p>
+                            <div class="p-footer-price clearfix">
+                                <span class="price-lg">$17.99</span>
+                                <a href="" class="cart right">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product left">
+                        <div class="p-img">
+                            <a href="#"><img src="img/image6.png" alt="" /></a>
+                        </div>
+                        <div class="p-footer">
+                            <h6><a href="#">Bad Dreams</a><span>by Artist</span></h6>
+                            <div class="rate">
+                                <div style="width:80%"></div>
+                            </div>
+                            <p><strong>Lorem ipsum</strong> dolor sit amet an adipiscing elit, sed diam nonu.</p>
+                            <div class="p-footer-price clearfix">
+                                <span class="price-lg">$23.59</span>
+                                <a href="" class="cart right">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <ul class="clearfix">
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">&raquo;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <a href="#home-link" class="home-link">&nbsp;</a>
+        <div class="center clearfix">
+            <div class="f-about left">
+                <h5 class="f-title">Little about us</h5>
+                <p>
+                    <b>Sed posuere</b> consectetur  est at.
+                    Nulla vitae elit libero, a pharetra.
+                    Lorem ipsum <b>dolor sit</b> amet, conse
+                    ctetuer adipiscing elit.
+                </p>
+                <h5 class="f-title">Socialize with us</h5>
+                <div class="f-social left">
+                    <a href="#" class="s-fb">&nbsp</a>
+                    <a href="#" class="s-tw">&nbsp</a>
+                    <a href="#" class="s-dribble">&nbsp</a>
+                    <a href="#" class="s-gl">&nbsp</a>
+                    <a href="#" class="s-mail">&nbsp</a>
+                </div>
+            </div>
+            <div class="f-archives left">
+                <h5 class="f-title">Our Archives</h5>
+                <ul class="f-list">
+                    <li><a href="#">March 2012</a></li>
+                    <li><a href="#">February 2012</a></li>
+                    <li><a href="#">January 2012</a></li>
+                    <li><a href="#">December 2011</a></li>
+                </ul>
+            </div>
+            <div class="f-populars left">
+                <h5 class="f-title">Popular Posts</h5>
+                <div class="f-product clearfix">
+                    <div class="f-product-img left">
+                        <a href="#"><img src="img/s-bs-1.png" alt="" /></a>
+                    </div>
+                    <div class="f-product-info">
+                        <h6><a href="#">Great Album</a></h6>
+                        <span class="comments-f"><i class="comments-ic-f"></i>12 Comments</span>
+                    </div>
+                </div>
+                <div class="f-product clearfix">
+                    <div class="f-product-img left">
+                        <a href="#"><img src="img/footer-image2.png" alt="" /></a>
+                    </div>
+                    <div class="f-product-info">
+                        <h6><a href="#">Great Album</a></h6>
+                        <span class="comments-f"><i class="comments-ic-f"></i>12 Comments</span>
+                    </div>
+                </div>
+            </div>
+            <div class="f-search left">
+                <h5 class="f-title">Search our Site</h5>
+                <form action="#">
+                    <input type="text" class="f-search-inp" placeholder="Enter Search ..." />
+                </form>
+                <h5 class="f-title">Tag Cloud</h5>
+                <a href="#" class="tags">Audio CD</a>
+                <a href="#" class="tags">Video</a>
+                <a href="#" class="tags">Playlist</a>
+                <a href="#" class="tags">Avantgarde</a>
+                <a href="#" class="tags">Melancholic</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="center clearfix">
+                <a href="#">Home </a>
+                <a href="#">Portfolio</a>
+                <a href="#">Sitemap</a>
+                <a href="#">Contact</a>
+                <p class="right">Musica @2013 by PremiumCoding | All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
